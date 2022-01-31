@@ -4,6 +4,7 @@ import 'rowcolumntext.dart';
 import 'containertextcolumn.dart';
 import 'buttonclicking.dart';
 import 'trafficbutton.dart';
+import 'listInformation.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: TrafficButton(),
+      home: ListInformation(),
     );
   }
 }
