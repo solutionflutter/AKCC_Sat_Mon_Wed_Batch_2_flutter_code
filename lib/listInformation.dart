@@ -32,6 +32,35 @@ class _ListInformationState extends State<ListInformation> {
             ),
             child: ListView.builder(
               itemCount: information.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  height: 70,
+                  margin: EdgeInsets.only(top: 15),
+                  decoration: BoxDecoration(
+                    color: index % 6 == 0
+                        ? Colors.yellow.shade800
+                        : index % 5 == 0
+                            ? Colors.blueAccent.shade700
+                            : index % 4 == 0
+                                ? Colors.grey.shade700
+                                : index % 2 == 1
+                                    ? Colors.green.shade700
+                                    : Colors.blueGrey.shade700,
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "${information[index]}",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        fontStyle: FontStyle.normal,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                );
+              },
             ),
           ),
         ),
